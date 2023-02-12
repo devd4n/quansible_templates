@@ -1,0 +1,6 @@
+---
+- name: Install gitlab
+  hosts: localhost
+  become: true
+  roles:
+  - role: ansible_role_gitlab
