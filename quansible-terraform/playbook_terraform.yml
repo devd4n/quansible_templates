@@ -1,1 +1,15 @@
-
+---
+- name: Install Terraform
+  hosts: localhost
+  remote_user: ansible_admin
+  roles:
+  - role: ansible_role_terraform
+  tasks:
+    - name: add terraform to PATH
+      lineinfile:
+        path: ~/.profile
+        line: export PATH="$PATH:/home/quansible_1"
+    - name: reload .profile file
+      shell: source ~/.profile
+      args:
+        executable: /bin/bash
