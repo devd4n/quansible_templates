@@ -1,6 +1,6 @@
 ---
 - name: Install Terraform
-  hosts: localhost
+  hosts: automata
   remote_user: ansible_admin
   roles:
   - role: ansible_role_terraform
